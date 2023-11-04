@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea_1_3.Views.Page_list_people"
+             Title="Page_list_people">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <CollectionView x:Name="list" SelectionMode="Single" SelectionChanged="OnItemTapped">
+
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Vertical" ItemSpacing="15">
+
+                    </LinearItemsLayout>
+                </CollectionView.ItemsLayout>
+
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Margin="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Grid.Column="0" Text="{Binding id}"></Label>
+                            <Label Grid.Column="1" Text="-"></Label>
+                            <Label Grid.Column="2" Text="{Binding names}"></Label>
+                            <Label Grid.Column="3" Text=" "></Label>
+                            <Label Grid.Column="4" Text="{Binding surnames}"></Label>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Button Text="Eliminar" Grid.Column="0" Grid.Row="0" HorizontalOptions="Start" Margin="10,10,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="question_delete"/>
+                <Button Grid.Column="1" Grid.Row="0" HorizontalOptions="Start" Text="Editar" Margin="10,10,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="update_data"/>
+                <Button Grid.Column="0" Grid.Row="1" HorizontalOptions="Start" Text="Ver datos" Margin="10,10,0,0" FontSize="15" Background="MediumPurple" TextColor="White" WidthRequest="150" Clicked="view_data"/>
+            </Grid>
+
+            
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

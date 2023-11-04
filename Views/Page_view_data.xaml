@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tarea_1_3.Views.Page_view_data"
+             Title="Page_view_data">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry Keyboard="Text" IsReadOnly="True" BackgroundColor="#A2A2A2" MaxLength="100" Placeholder="Indique su nombre" x:Name="txt_name" Margin="10"></Entry>
+            <Entry Keyboard="Text" IsReadOnly="True" BackgroundColor="#A2A2A2" MaxLength="100" Placeholder="Indique su apellido" x:Name="txt_surname" Margin="10"></Entry>
+            <Entry Keyboard="Numeric" IsReadOnly="True" BackgroundColor="#A2A2A2" MaxLength="2" Placeholder="Indique edad" x:Name="txt_age" Margin="10"></Entry>
+            <Entry Keyboard="Text" IsReadOnly="True" BackgroundColor="#A2A2A2" MaxLength="100" Placeholder="Indique su correo electronico" x:Name="txt_email" Margin="10"></Entry>
+            <Entry Keyboard="Text" IsReadOnly="True" BackgroundColor="#A2A2A2" MaxLength="200" Placeholder="Indique su direccion de casa" x:Name="txt_address" Margin="10"></Entry>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>
